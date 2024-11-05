@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -8,12 +13,9 @@ body {
         "footer  footer"
 }
 
-img {
-    width: auto;
-}
-
 nav {
-    grid-area: navbar
+    grid-area: navbar;
+    background-color: transparent;
 }
 
 header {
@@ -28,4 +30,60 @@ main {
 
 footer {
     grid-area: footer;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: right;
+}
+
+li a {
+    display: block;
+    text-decoration: none;
+    padding: 10px;
+    font-size: medium;
+}
+
+
+.bg-img {
+    width: 200%;
+    height: 125%;
+    background-image: url("headerimage.jpg");
+    background-position: center;
+    background-repeat: none;
+    background-size: cover;
+    position: relative;
+}
+
+.container {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 20px;
+    width: auto;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+}
+
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
 }
