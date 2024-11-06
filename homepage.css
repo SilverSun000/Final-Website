@@ -5,77 +5,42 @@
 
 body {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: 
-        "navbar  navbar"
-        "header  header"
-        "main    main"
-        "footer  footer"
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1.75fr 1fr;
+    grid-template-areas:
+        "navbar navbar"
+        "main   main"
+        "footer footer";
+    height: 100vh;
+    background-image: url('headerimage.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 nav {
     grid-area: navbar;
-    background-color: transparent;
-}
-
-header {
-    height: 100vh;
-    grid-area: header;
+    padding: 10px 0;
+    width: 100%;
+    position: sticky;
+    top: 0;
 }
 
 main {
-    grid-area: main;
-    
-}
-
-footer {
-    grid-area: footer;
-}
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
-
-li {
-    float: right;
-}
-
-li a {
-    display: block;
-    text-decoration: none;
-    padding: 10px;
+    padding-top: 50px;
+    grid-column: 2;
+    text-align: center;
     font-size: medium;
-}
-
-
-.bg-img {
-    width: 200%;
-    height: 125%;
-    background-image: url("headerimage.jpg");
-    background-position: center;
-    background-repeat: none;
-    background-size: cover;
-    position: relative;
-}
-
-.container {
-    position: absolute;
-    right: 0;
-    top: 0;
-    margin: 20px;
-    width: auto;
+    margin-right: 50px;
 }
 
 .topnav {
-    overflow: hidden;
-    background-color: #333;
+    display: flex;
+    justify-content: right;
+    gap: 20px;
 }
 
 .topnav a {
-    float: left;
     color: #f2f2f2;
     text-align: center;
     padding: 14px 16px;
@@ -86,4 +51,14 @@ li a {
 .topnav a:hover {
     background-color: #ddd;
     color: black;
+}
+
+
+footer {
+    grid-area: footer;
+    padding: 10px 0;
+    text-align: center;
+    background-color: black;
+    color: white;
+    text-align: right;
 }
