@@ -12,10 +12,7 @@ body {
         "main   main"
         "footer footer";
     height: 100vh;
-    background-image: url('headerimage.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: #b770da;
 }
 
 nav {
